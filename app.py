@@ -44,8 +44,6 @@ def donughtDiversity(portfolio: pd.DataFrame) -> None:
     p=plt.gcf()
     p.gca().add_artist(my_circle)
 
-    plt.show()
-
 
 def main() -> None:
 
