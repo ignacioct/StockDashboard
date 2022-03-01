@@ -12,6 +12,10 @@ pip install yahoo_fin
 pip install streamlit
 ```
 
+## Uploading your portfolio data
+
+The app will search for a file called ```portfolio.csv``` in your parent directory. There, a table information about your portfolio should be placed. This csv file has the following variables to fill up: Stock Symbol, Price (at which it was bought), Money Invested, Date of purcharse. 
+
 ## Running the Dashboard
 
 To run the app, once the environment is activated, just type the following Streamlit command:
