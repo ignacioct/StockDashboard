@@ -44,3 +44,5 @@ class Portfolio:
         self.df["Gain/Loss %"] = gainLossList
         self.df["Current Value Investment"] = currentValueInvestmentList
         
+        # Rounding floats to two decimals digits
+        self.df = self.df.round(2)
