@@ -17,7 +17,7 @@ matplotlib.rcParams["axes.grid"] = True
 matplotlib.rcParams["savefig.transparent"] = True
 
 
-def donughtDiversity(portfolio: pd.DataFrame) -> None:
+def donughtDiversity(portfolio: pd.DataFrame, totalMoneyInvested: float) -> None:
     """
     Creating a donught chart with the diversity of the Portfolio.
 
@@ -34,7 +34,7 @@ def donughtDiversity(portfolio: pd.DataFrame) -> None:
     labels = []
 
     for _, row in portfolio.iterrows():
-        data.append(row["Amount"])
+        data.append(row["Money Invested"] / (totalMoneyInvested * 100))
         labels.append(row["Stock"])
 
     # Pie chart in which the donught chart is based
@@ -87,7 +87,7 @@ def main() -> None:
     secondCol.header("Portfolio Diversity")
 
     fig = plt.figure()
-    donughtDiversity(portfolio.df)
+    donughtDiversity(portfolio.df, portfolio.totalMoneyInvested)
     secondCol.pyplot(fig)
 
 
